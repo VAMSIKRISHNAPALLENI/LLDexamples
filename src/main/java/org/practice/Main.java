@@ -18,6 +18,7 @@ public class Main {
         lowLevelDesign.testForBuilderPattern();
         /*-----------Composite Pattern---------------------------*/
         lowLevelDesign.testForCompositePattern();
+        lowLevelDesign.testUnixFileSearch();
         /*------------Decorator Pattern------------------------*/
 
         log.info("Ended Low Level Design");

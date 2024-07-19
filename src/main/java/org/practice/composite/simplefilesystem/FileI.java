@@ -1,4 +1,4 @@
-package org.practice.composite;
+package org.practice.composite.simplefilesystem;
 
 public interface FileI {
     void displayInfo();
