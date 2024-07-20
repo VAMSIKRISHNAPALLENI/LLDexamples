@@ -8,6 +8,12 @@ import org.practice.composite.unixfilesearch.Directory;
 import org.practice.composite.unixfilesearch.File;
 import org.practice.composite.unixfilesearch.FileSearcher;
 import org.practice.composite.unixfilesearch.SearchParams;
+import org.practice.decoratorpattern.pizza_example.Pizza;
+import org.practice.decoratorpattern.pizza_example.pizzastyle.FarmHouse;
+import org.practice.decoratorpattern.pizza_example.toppings.Cheese;
+import org.practice.decoratorpattern.pizza_example.toppings.Chicken;
+import org.practice.decoratorpattern.pizza_example.toppings.Toppings;
+import org.practice.decoratorpattern.pizza_example.toppings.Veggies;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -36,9 +42,16 @@ public class LowLevelDesign {
     }
 
     public void testForCompositePattern(){
+        //https://medium.com/@ngneha090/beginners-guide-to-composite-design-pattern-java-f9ef644e3425
         log.info("Composite Started");
         composite.runFileSystem();
         log.info("Composite Ended");
+    }
+
+    public void testForDecoratorPizzaExample(){
+        Pizza pizza = new FarmHouse();
+        pizza = new Chicken(new Cheese(pizza));
+        log.info("Ordered Pizza is {}, and Prize for it is {}",pizza.getpizzaDisc(),pizza.getPrize());
     }
 
     public void testUnixFileSearch() {
@@ -79,4 +92,9 @@ public class LowLevelDesign {
         processRequest.setMsg("My First Project Success");
         return processRequest;
     }
+
+    /*-----
+    1.Parking lot -> https://swatijha.hashnode.dev/parking-lot-low-level-design
+
+    ------*/
 }

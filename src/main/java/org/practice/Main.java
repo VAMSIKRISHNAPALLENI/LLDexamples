@@ -20,7 +20,7 @@ public class Main {
         lowLevelDesign.testForCompositePattern();
         lowLevelDesign.testUnixFileSearch();
         /*------------Decorator Pattern------------------------*/
-
+        lowLevelDesign.testForDecoratorPizzaExample();
         log.info("Ended Low Level Design");
     }
 }
