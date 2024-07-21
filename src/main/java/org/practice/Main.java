@@ -21,6 +21,8 @@ public class Main {
         lowLevelDesign.testUnixFileSearch();
         /*------------Decorator Pattern------------------------*/
         lowLevelDesign.testForDecoratorPizzaExample();
+        /*------------Strategy Pattern------------------------*/
+        lowLevelDesign.testForStrategy();
         log.info("Ended Low Level Design");
     }
 }

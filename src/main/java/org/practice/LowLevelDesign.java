@@ -14,6 +14,10 @@ import org.practice.decoratorpattern.pizza_example.toppings.Cheese;
 import org.practice.decoratorpattern.pizza_example.toppings.Chicken;
 import org.practice.decoratorpattern.pizza_example.toppings.Toppings;
 import org.practice.decoratorpattern.pizza_example.toppings.Veggies;
+import org.practice.strategy.payment.CreditCardStrategy;
+import org.practice.strategy.payment.Item;
+import org.practice.strategy.payment.PaypalStrategy;
+import org.practice.strategy.payment.ShoppingCart;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -83,7 +87,21 @@ public class LowLevelDesign {
         FileSearcher searcher = new FileSearcher();
         System.out.println(searcher.search(dir0, params));
     }
+    public void testForStrategy(){
+        ShoppingCart cart = new ShoppingCart();
 
+        Item item1 = new Item("1234",10);
+        Item item2 = new Item("5678",40);
+
+        cart.addItem(item1);
+        cart.addItem(item2);
+
+        //pay by paypal
+        cart.pay(new PaypalStrategy("test@example.com", "pwd"));
+
+        //pay by credit card
+        cart.pay(new CreditCardStrategy("Mock Test", "1234567890123456", "786", "12/15"));
+    }
     public ProcessRequest getMockProcessRequest() {
         ProcessRequest processRequest = new ProcessRequest();
         processRequest.setPrecheckNeeded(true);
