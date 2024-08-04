@@ -23,6 +23,8 @@ public class Main {
         lowLevelDesign.testForDecoratorPizzaExample();
         /*------------Strategy Pattern------------------------*/
         lowLevelDesign.testForStrategy();
+        /*----BackOff Strategy-----*/
+        lowLevelDesign.beginRetyMechanism();
         log.info("Ended Low Level Design");
     }
 }

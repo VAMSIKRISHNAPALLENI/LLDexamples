@@ -1,9 +1,7 @@
-package org.practice.example.entity;
+package org.practice.example.parkinglot.entity;
 
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Map;
 import java.util.PriorityQueue;
 
 @Data

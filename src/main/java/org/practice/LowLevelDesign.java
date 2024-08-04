@@ -14,6 +14,7 @@ import org.practice.decoratorpattern.pizza_example.toppings.Cheese;
 import org.practice.decoratorpattern.pizza_example.toppings.Chicken;
 import org.practice.decoratorpattern.pizza_example.toppings.Toppings;
 import org.practice.decoratorpattern.pizza_example.toppings.Veggies;
+import org.practice.example.backoffstrategy.web.ClientBackOffStraregy;
 import org.practice.strategy.payment.CreditCardStrategy;
 import org.practice.strategy.payment.Item;
 import org.practice.strategy.payment.PaypalStrategy;
@@ -21,6 +22,8 @@ import org.practice.strategy.payment.ShoppingCart;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+
+import static org.practice.MockData.getMockProcessRequest;
 
 @Service
 public class LowLevelDesign {
@@ -33,7 +36,7 @@ public class LowLevelDesign {
 
     public void testForCOR() {
         log.info("Starting Chain Of Responsibilty");
-        ProcessRequest processRequest = this.getMockProcessRequest();
+        ProcessRequest processRequest = getMockProcessRequest();
         this.baseChain.invokeChain(processRequest);
         log.info("Ended Chain Of Responsibilty");
     }
@@ -102,17 +105,17 @@ public class LowLevelDesign {
         //pay by credit card
         cart.pay(new CreditCardStrategy("Mock Test", "1234567890123456", "786", "12/15"));
     }
-    public ProcessRequest getMockProcessRequest() {
-        ProcessRequest processRequest = new ProcessRequest();
-        processRequest.setPrecheckNeeded(true);
-        processRequest.setValidationCheck(true);
-        processRequest.setData("TestCase1");
-        processRequest.setMsg("My First Project Success");
-        return processRequest;
-    }
+
 
     /*-----
     1.Parking lot -> https://swatijha.hashnode.dev/parking-lot-low-level-design
 
     ------*/
+
+    /*--------Back Off Stategy-----------*/
+    public void beginRetyMechanism(){
+        ClientBackOffStraregy clientBackOffStraregy= new ClientBackOffStraregy();
+        clientBackOffStraregy.startMe();
+    }
+
 }

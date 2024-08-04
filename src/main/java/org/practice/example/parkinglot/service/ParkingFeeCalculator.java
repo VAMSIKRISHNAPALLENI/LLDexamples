@@ -1,7 +1,7 @@
-package org.practice.example.service;
+package org.practice.example.parkinglot.service;
 
-import org.practice.example.entity.Ticket;
-import org.practice.example.enums.VehicleType;
+import org.practice.example.parkinglot.entity.Ticket;
+import org.practice.example.parkinglot.enums.VehicleType;
 
 public class ParkingFeeCalculator {
     private static final double TWO_WHEELER_RATE = 10.0;

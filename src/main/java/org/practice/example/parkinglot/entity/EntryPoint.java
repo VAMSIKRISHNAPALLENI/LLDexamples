@@ -1,7 +1,7 @@
-package org.practice.example.entity;
+package org.practice.example.parkinglot.entity;
 
 import lombok.Data;
-import org.practice.example.enums.VehicleType;
+import org.practice.example.parkinglot.enums.VehicleType;
 
 import java.util.HashMap;
 import java.util.Map;

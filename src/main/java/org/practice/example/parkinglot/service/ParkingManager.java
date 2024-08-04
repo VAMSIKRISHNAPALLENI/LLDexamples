@@ -1,10 +1,12 @@
-package org.practice.example.service;
+package org.practice.example.parkinglot.service;
 
-import org.practice.example.entity.*;
-import org.practice.example.enums.VehicleType;
+import org.practice.example.parkinglot.enums.VehicleType;
+import org.practice.example.parkinglot.entity.ParkingLot;
+import org.practice.example.parkinglot.entity.ParkingSpot;
+import org.practice.example.parkinglot.entity.Ticket;
+import org.practice.example.parkinglot.entity.Vehicle;
 
 import java.time.LocalDateTime;
-import java.util.PriorityQueue;
 
 public class ParkingManager {
     ParkingLot parkingLot;

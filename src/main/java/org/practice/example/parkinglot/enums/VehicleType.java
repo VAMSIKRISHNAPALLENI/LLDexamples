@@ -1,4 +1,4 @@
-package org.practice.example.enums;
+package org.practice.example.parkinglot.enums;
 
 public enum VehicleType {
     TWO_WHEELER("Two Wheeler"),

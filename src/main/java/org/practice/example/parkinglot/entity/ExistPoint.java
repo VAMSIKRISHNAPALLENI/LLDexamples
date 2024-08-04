@@ -1,4 +1,4 @@
-package org.practice.example.entity;
+package org.practice.example.parkinglot.entity;
 
 import lombok.Data;
 

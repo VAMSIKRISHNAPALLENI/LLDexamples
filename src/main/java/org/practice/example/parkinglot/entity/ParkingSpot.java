@@ -1,8 +1,8 @@
-package org.practice.example.entity;
+package org.practice.example.parkinglot.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import org.practice.example.enums.VehicleType;
+
 @Data
 @AllArgsConstructor
 public class ParkingSpot {
