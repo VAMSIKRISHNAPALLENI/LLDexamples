@@ -13,7 +13,7 @@ public class Ticket {
     private LocalDateTime entryTime;
     private LocalDateTime exitTime;
     private Vehicle vehicle;
-    private ParkingSpot spot;
+    private ParkingSpot parkingSpot;
     private double totalAmount;
     public void setExitTime() {
         this.exitTime = LocalDateTime.now();
